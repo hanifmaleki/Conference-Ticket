@@ -4,16 +4,21 @@ const iconUploadOriginal = 'assets/images/icon-upload.svg'
 let avatarUploadedSuccesfully = false
 let url 
 
-let formSection
-let ticketSection
+// Form section
+let formHeaderSection
+let formMainSection
+let formFooterSection
 let uploadImageButtonDiv 
 let uploadAvatarImage
 let uploadContainerTextDiv 
 let uploadImageActionDiv
 let fileUploadErrorDiv 
 let fileUploadBelowDiv 
+let formSubmitButton
 
 // Ticket section
+let ticketHeaderSection
+let ticketMainSection
 let ticketFullNameSpan
 let ticketEmailSpan
 let ticketImage
@@ -21,14 +26,21 @@ let ticketFullnameDiv
 let ticketGithubDiv
 
 window.onload = () => {
-    formSection = document.querySelector('#form-section')
-    ticketSection = document.querySelector('#ticket-section')
+    formHeaderSection = document.querySelector('#form-section-header')
+    formMainSection = document.querySelector('#form-section-main')
+    formFooterSection = document.querySelector('#form-section-footer')
+    
+    ticketHeaderSection = document.querySelector('#ticket-section-header')
+    ticketMainSection = document.querySelector('#ticket-section-main')
+
     uploadImageButtonDiv = document.querySelector('#upload-button-image')
     uploadAvatarImage = document.querySelector('#upload-avatar-image')
     uploadContainerTextDiv = document.querySelector('#upload-container-text')
     uploadImageActionDiv = document.querySelector('#upload-image-button-container')
     fileUploadErrorDiv = document.querySelector('#file-upload-error-container')
     fileUploadBelowDiv = document.querySelector('#file-upload-below-container')
+    formSubmitButton = document.querySelector('#form-submit-button')
+    formSubmitButton.addEventListener('click', formSubmitted)
 
     ticketFullNameSpan = document.querySelector('#full-name-span-id')
     ticketEmailSpan = document.querySelector('#email-span-id')
@@ -39,19 +51,24 @@ window.onload = () => {
     uploadImageButtonDiv.addEventListener('click', uploadImageDivOnClick)
     document.querySelector('#change-image-button').addEventListener('click', uploadImageDivOnClick)
     document.querySelector('#remove-image-button').addEventListener('click', removeUploadedImage)
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault()
+    })
 
     setInitialUploadImageButton()
 
     const inputWrapperDivs = document.querySelectorAll('.input-wrapper')
     inputWrapperDivs.forEach(inputWrapperDiv => {
-        input = inputWrapperDiv.querySelector('input')
+        const input = inputWrapperDiv.querySelector('input')
         input.addEventListener('focus', () => inputWrapperDiv.classList.add('focused'))
         input.addEventListener('blur', () => inputWrapperDiv.classList.remove('focused'))
         
         input.wrapper = inputWrapperDiv
     })
 
-    ticketSection.style.display = 'none'
+    console.log('window.onload')
+    ticketHeaderSection.style.display = 'none'
+    ticketMainSection.style.display = 'none'
 }
 
 function formSubmitted() {
@@ -85,13 +102,16 @@ function formSubmitted() {
     ticketEmailSpan.textContent = email
     ticketGithubDiv.textContent = document.querySelector('#github').value.trim()
 
-    formSection.style.display = 'none'
-    ticketSection.style.display = 'block'
+    formHeaderSection.style.display = 'none'
+    formMainSection.style.display = 'none'
+    formFooterSection.style.display = 'none'
+    ticketHeaderSection.style.display = 'block'
+    ticketMainSection.style.display = 'block'
 
     return false
 }
 
-async function uploadImageDivOnClick(event) {
+async function uploadImageDivOnClick() {
     const pickerOpts = {
         id: 123456,
         types: [
@@ -136,9 +156,5 @@ function removeUploadedImage() {
 function setInitialUploadImageButton() {
     url = new URL(`${iconUploadOriginal}`, window.location.href)
     uploadAvatarImage.src = url
-}
-
-function onUploadError(error) {
-    console.log('upload error', error)
 }
 

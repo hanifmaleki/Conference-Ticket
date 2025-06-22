@@ -22,8 +22,8 @@ body {
     position: relative;
 
     font-family: Inconsolata, Helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 26px;
     color: var(--neutral-0);
 
     height: 100vh;
@@ -31,8 +31,8 @@ body {
 
 @media(max-width: 420px) {
     body {
-        font-size: 17px;
-        line-height: 25px;
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
@@ -40,14 +40,10 @@ input {
     border: solid 1px var(--neutral-300);
     border-radius: 10px;
     background-color: var(--neutral-900);
-    padding: 18px 15px;
+    padding: 15px 12px;
     font-size: 16px;
     color: var(--neutral-0);
     width: 100%;
-}
-
-input[type="text"], 
-input[type="email"] {
 }
 
 input:focus {
@@ -57,13 +53,18 @@ input:focus {
 input:-webkit-autofill {
     background-color: var(--neutral-900) !important;
     -webkit-text-fill-color: var(--neutral-0) !important;
-    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    input:-webkit-autofill {
+        transition: background-color 5000s ease-in-out 0s !important;
+    }
 }
 
 .input-wrapper {
     position: relative;
     padding: 4px;
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 .input-wrapper.focused::before {
@@ -85,7 +86,10 @@ input[type="file"] {
     display: none;
 }
 
-input[type="submit"] {
+.submit-button {
+    border-radius: 10px;
+    padding: 15px 12px;
+    width: 100%;
     background-color: var(--orange-500);
     color: var(--neutral-900);
     border: none;
@@ -145,7 +149,7 @@ input::placeholder {
     background-image: url('assets/images/pattern-squiggly-line-top.svg');
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: contain;
+    background-size: cover;
     height: 20vh;
     width: 20vw;
     min-width: 300px;
@@ -203,12 +207,13 @@ input::placeholder {
 }
 
 .form-page-title {
+
     font-size: 60px;
-    max-width: 1000px;
+    max-width: 900px;
     font-weight: 700;
     line-height: 68px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 @media(max-width: 420px) {
@@ -216,7 +221,7 @@ input::placeholder {
         font-size: 40px;
         line-height: 48px;
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 }
 
@@ -226,12 +231,12 @@ input::placeholder {
 }
 
 .form-page-subtitle {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     max-width: 800px;
     text-align: center;
     font-size: 26px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 32px;
     color: var(--neutral-300);
 }
 
@@ -254,8 +259,8 @@ input::placeholder {
 .form-inner-container {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    gap: 15px;
+    width: 450px;
+    gap: 10px;
 }
 
 @media(max-width: 420px) {
@@ -264,21 +269,14 @@ input::placeholder {
     }
 }
 
-.file-upload-container {
-}
-
 .file-upload-inner-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 10px;
     padding: 20px;
     text-align: center;
-    border-image-source: url('assets/images/border.svg');
-    border-image-slice: 15 15;
-    border-image-repeat: stretch;
-    border-image-width: 15px 15px;
     border: 1px dashed var(--neutral-0);
     background: var(--neutral-900);
     color: var(--neutral-300);
@@ -321,7 +319,7 @@ input::placeholder {
 }
 
 .form-item-container {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 @media(max-width: 420px) {
@@ -334,6 +332,8 @@ input::placeholder {
     font-size: 48px;
     line-height: 54px;
     font-weight: 700;
+    margin-top: 40px;
+    text-align: center;
 }
 
 @media(max-width: 420px) {
@@ -341,9 +341,6 @@ input::placeholder {
         font-size: 40px;
         line-height: 48px;
     }
-}
-
-.ticket-section-outer-container {
 }
 
 .ticket-section-inner-container {
@@ -358,12 +355,6 @@ input::placeholder {
 .ticket-up-logo-container {
     margin-top: 20px;
 }
-
-.ticket-title {
-    margin-top: 40px;
-    text-align: center;
-}
-
 
 @media(max-width: 420px) {
     .ticket-title {

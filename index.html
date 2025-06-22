@@ -19,163 +19,179 @@
     </head>
 
     <body>
-        <div class="lines-container"></div>
-        <div class="circle-container-1"></div>
-        <div class="circle-container-2"></div>
-        <div class="s-container"></div>
-        <div class="arc-container"></div>
+        <nav>
+            <div class="lines-container"></div>
+            <div class="circle-container-1"></div>
+            <div class="circle-container-2"></div>
+            <div class="s-container"></div>
+            <div class="arc-container"></div>
+        </nav>
 
-        <section id="form-section">
-            <div class="form-page-header-container">
-                <image src="assets/images/logo-full.svg" />
-            </div>
-
-            <div class="form-page-title-container">
-                <div class="form-page-title">
-                    Your Journey to Coding Conf 2025 Starts Here!
-                </div>
-            </div>
-
-            <div class="form-page-subtitle-container">
-                <div class="form-page-subtitle">
-                    Secure your spot at next year's biggest coding conference.
-                </div>
-            </div>
-
-            <div class="form-container">
-                <div class="form-inner-container">
-                    <form onsubmit="return formSubmitted();">
-                        <div class="file-upload-container">
-                            <label for="avatar">Upload Avatar</label>
-
-                            <div class="file-upload-inner-container input-wrapper">
-                                <div id="upload-button-image" class="upload-button-container">
-                                    <img id="upload-avatar-image" src="assets/images/icon-upload.svg" />
-                                </div>
-
-                                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
-
-                                <div id="upload-container-text" class="upload-container-text">
-                                    Drag and drop or click to upload 
-                                </div>
-
-                                <div id="upload-image-button-container" class="upload-image-button-container">
-                                    <div id="remove-image-button" class="upload-action-button">
-                                        <a>Remove image</a>
-                                    </div>
-                                    <div id="change-image-button" class="upload-action-button">
-                                        <a>Change image</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="file-upload-below-container" class="file-upload-below-container">
-                                &#x24BE; &nbsp; Upload your photo (JPG or PNG, max size: 500KB).
-                            </div>
-
-                            <div id="file-upload-error-container" class="input-error">
-                                <div>
-                                    &#x24BE;&nbsp; 
-                                </div>
-                                <div id="upload-error-meassage" class="intput-error-text">file too large. Please upload a photo under 500KB</div>
-                            </div>
-                        </div>
-
-                        <div class="form-item-container">
-                            <label for="name">Full Name</label>
-                            <div class="input-wrapper">
-                                <input type="text" id="name" requiered />
-                            </div>
-                            <div class="input-error">
-                                <div>
-                                    &#x24BE;&nbsp; 
-                                </div>
-                                <div id="name-error-meassage" class="intput-error-text">Please enter your name.</div>
-                            </div>
-                        </div>
-
-                        <div class="form-item-container">
-                            <label for="email">Email Address</label>
-                            <div class="input-wrapper">
-                                <input type="email" id="email" required placeholder="example@email.com" />
-                            </div>
-
-                            <div class="input-error">
-                                <div>
-                                    &#x24BE;&nbsp; 
-                                </div>
-                                <div id="email-error-meassage" class="intput-error-text">Please enter a valid email address.</div>
-                            </div>
-                        </div>
-
-                        <div class="form-item-container">
-                            <label for="github">GitHub Username</label>
-                            <div class="input-wrapper">
-                                <input type="text" id="github" required placeholder="@yourusername" />
-                            </div>
-                        </div>
-
-                        <div class="form-item-container">
-                            <input type="submit" value="Generate My Ticket" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        
-            <div class="attribution">
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-                Coded by <a href="#">Your Name Here</a>.
-            </div>
-        </section>
-
-        <section id="ticket-section" class="ticket-section-outer-container">
-            <div class="ticket-section-inner-container">
-                <div class="ticket-up-logo-container">
-                    <image src="assets/images/logo-full.svg" />
+        <header>
+            <section id="form-section-header">
+                <div class="form-page-header-container">
+                    <img src="assets/images/logo-full.svg" alt="page-logo" />
                 </div>
 
-                <div class="ticket-title">
-                    Congrats, <span class="title-gradient"><span id="full-name-span-id">Full Name</span>!</span> Your ticket is ready.
-                </div>
-
-                <div class="ticket-subtitle">
-                  We've emailed your ticket to 
-                  <span id="email-span-id" class="text-orange">Email@Address.com</span> 
-                  and will send updates in the run up to the event.
-                </div>
-
-                <div class="ticket-container">
-                    <div class="ticket-center-container">
-                        <div class="ticket-logo-container">
-                            <image src="assets/images/logo-full.svg" />
-                        </div>
-
-                        <div class="ticket-date-container">
-                            Jan 31, 2025 / Austin, TX
-                        </div>
-
-                        <div class="ticket-bottom-container">
-                            <div class="ticket-avatar-container">
-                                <img id="ticket-avatar-image-id" src="assets/images/icon-upload.svg" />
-                            </div>
-
-                            <div>
-                                <div id="ticket-fullname-div-id">Full Name</div>
-                                <div class="ticket-github-container">
-                                    <img src="assets/images/icon-github.svg">
-                                    <div id="ticket-github-div-id">
-                                        Githib
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ticket-id-container">
-                        <div class="ticket-id-span">#01609</div>
+                <div class="form-page-title-container">
+                    <div class="form-page-title">
+                        Your Journey to Coding Conf 2025 Starts Here!
                     </div>
                 </div>
-            </div>
-        </section>
+
+                <div class="form-page-subtitle-container">
+                    <div class="form-page-subtitle">
+                        Secure your spot at next year's biggest coding conference.
+                    </div>
+                </div>
+            </section>
+
+            <section id="ticket-section-header">
+                <div class="ticket-section-inner-container">
+                    <div class="ticket-up-logo-container">
+                        <image src="assets/images/logo-full.svg" alt="page-log" />
+                    </div>
+
+                    <div class="ticket-title">
+                        Congrats, <span class="title-gradient"><span id="full-name-span-id">Full Name</span>!</span> Your ticket is ready.
+                    </div>
+
+                    <div class="ticket-subtitle">
+                        We've emailed your ticket to 
+                        <span id="email-span-id" class="text-orange">Email@Address.com</span> 
+                        and will send updates in the run up to the event.
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section id="form-section-main">
+                <div class="form-container">
+                    <div class="form-inner-container">
+                        <form>
+                            <div class="file-upload-container">
+                                <label for="avatar">Upload Avatar</label>
+
+                                <div class="file-upload-inner-container input-wrapper">
+                                    <div id="upload-button-image" class="upload-button-container">
+                                        <img id="upload-avatar-image" src="assets/images/icon-upload.svg" alt="upload-avatar" />
+                                    </div>
+
+                                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+
+                                    <div id="upload-container-text" class="upload-container-text">
+                                        Drag and drop or click to upload 
+                                    </div>
+
+                                    <div id="upload-image-button-container" class="upload-image-button-container">
+                                        <div id="remove-image-button" class="upload-action-button">
+                                            <a>Remove image</a>
+                                        </div>
+                                        <div id="change-image-button" class="upload-action-button">
+                                            <a>Change image</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="file-upload-below-container" class="file-upload-below-container">
+                                    &#x24BE; &nbsp; Upload your photo (JPG or PNG, max size: 500KB).
+                                </div>
+
+                                <div id="file-upload-error-container" class="input-error">
+                                    <div>
+                                        &#x24BE;&nbsp; 
+                                    </div>
+                                    <div id="upload-error-meassage" class="intput-error-text">file too large. Please upload a photo under 500KB</div>
+                                </div>
+                            </div>
+
+                            <div class="form-item-container">
+                                <label for="name">Full Name</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="name" requiered />
+                                </div>
+                                <div class="input-error">
+                                    <div>
+                                        &#x24BE;&nbsp; 
+                                    </div>
+                                    <div id="name-error-meassage" class="intput-error-text">Please enter your name.</div>
+                                </div>
+                            </div>
+
+                            <div class="form-item-container">
+                                <label for="email">Email Address</label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="email" required placeholder="example@email.com" />
+                                </div>
+
+                                <div class="input-error">
+                                    <div>
+                                        &#x24BE;&nbsp; 
+                                    </div>
+                                    <div id="email-error-meassage" class="intput-error-text">Please enter a valid email address.</div>
+                                </div>
+                            </div>
+
+                            <div class="form-item-container">
+                                <label for="github">GitHub Username</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="github" required placeholder="@yourusername" />
+                                </div>
+                            </div>
+
+                            <div class="form-item-container">
+                                <button id="form-submit-button" class="submit-button" type="submit">Generate My Ticket</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ticket-section-main">
+                <div class="ticket-section-inner-container">
+                    <div class="ticket-container">
+                        <div class="ticket-center-container">
+                            <div class="ticket-logo-container">
+                                <image src="assets/images/logo-full.svg" alt="page-logo" />
+                            </div>
+
+                            <div class="ticket-date-container">
+                                Jan 31, 2025 / Austin, TX
+                            </div>
+
+                            <div class="ticket-bottom-container">
+                                <div class="ticket-avatar-container">
+                                    <img id="ticket-avatar-image-id" src="assets/images/icon-upload.svg" alt="ticket-image" />
+                                </div>
+
+                                <div>
+                                    <div id="ticket-fullname-div-id">Full Name</div>
+                                    <div class="ticket-github-container">
+                                        <img src="assets/images/icon-github.svg" alt="github-icon" />
+                                        <div id="ticket-github-div-id">
+                                            Githib
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ticket-id-container">
+                            <div class="ticket-id-span">#01609</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section id="form-section-footer">
+                <div class="attribution">
+                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+                    Coded by <a href="#">Your Name Here</a>.
+                </div>
+            </section>
+        </footer>
     </body>
 </html>
